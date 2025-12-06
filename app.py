@@ -1,4 +1,3 @@
-ifapp_code = '''
 import cv2
 import numpy as np
 import gradio as gr
@@ -257,9 +256,3 @@ if __name__ == "__main__":
         server_port=int(os.environ.get("PORT", 10000)),
         share=False
     )
-'''
-
-with open('app.py', 'w') as f:
-    f.write(app_code)
-
-print("app.py created successfully!")
