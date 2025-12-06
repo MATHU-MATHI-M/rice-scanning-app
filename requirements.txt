@@ -1,0 +1,8 @@
+
+gradio
+opencv-python-headless
+numpy
+pillow
+pandas
+scikit-learn
+PyMuPDF
