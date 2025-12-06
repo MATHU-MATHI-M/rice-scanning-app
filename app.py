@@ -1,4 +1,4 @@
-
+ifapp_code = '''
 import cv2
 import numpy as np
 import gradio as gr
@@ -249,5 +249,17 @@ def create_interface():
     return demo
 
 if __name__ == "__main__":
+    import os
     demo = create_interface()
-    demo.launch(share=True)
+    demo.queue()
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 10000)),
+        share=False
+    )
+'''
+
+with open('app.py', 'w') as f:
+    f.write(app_code)
+
+print("app.py created successfully!")
